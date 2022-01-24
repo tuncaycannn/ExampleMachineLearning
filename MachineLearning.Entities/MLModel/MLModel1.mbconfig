@@ -1,0 +1,30 @@
+﻿{
+  "TrainingTime": 2147482,
+  "Scenario": "ImageClassification",
+  "DataSource": {
+    "Type": "Folder",
+    "Version": 1,
+    "FolderPath": "C:\\Users\\user\\Desktop\\BankaLogoları"
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 0,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "ImageClassificationMulti",
+        "Score": 0.8571428571428571,
+        "RuntimeInSeconds": 105.35900115966797
+      }
+    ],
+    "Pipeline": "{\"parameter\":{\r\n  \"0\": {\r\n    \"OutputColumnName\": \"Label\",\r\n    \"InputColumnName\": \"Label\"\r\n  },\r\n  \"1\": {\r\n    \"LabelColumnName\": \"Label\",\r\n    \"ScoreColumnName\": \"Score\",\r\n    \"FeatureColumnName\": \"ImageSource\"\r\n  },\r\n  \"2\": {\r\n    \"OutputColumnName\": \"PredictedLabel\",\r\n    \"InputColumnName\": \"PredictedLabel\"\r\n  }\r\n},\"estimators\":[\"MapValueToKey\",\"ImageClassificationMulti\",\"MapKeyToValue\"]}",
+    "MetricName": "MicroAccuracy"
+  },
+  "Type": "TrainingConfig",
+  "Version": 1
+}
